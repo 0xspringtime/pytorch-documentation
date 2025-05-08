@@ -35,24 +35,14 @@ print(sparse_csc_tensor)
 
 # sparse_bsc_tensor
 # Constructs a sparse tensor in BSC (Block Compressed Sparse Column) with specified 2-dimensional blocks at the given ccol_indices and row_indices.
-#values = torch.tensor([[1, 2], [3, 4], [5, 6]])
-#col_indices = torch.tensor([2, 0, 2])
-#row_indices = torch.tensor([0, 1, 1])
-#blocksize = (2, 2)
-#shape = (6, 4)
-#sparse_bsc_tensor = torch.sparse_bsc_tensor(col_indices, row_indices, values, blocksize, shape)
-#print(sparse_bsc_tensor)
+values = torch.tensor([[1, 2], [3, 4], [5, 6]])
+col_indices = torch.tensor([2, 0, 2])
+row_indices = torch.tensor([0, 1, 1])
+blocksize = (2, 2)
+shape = (6, 4)
+sparse_bsc_tensor = torch.sparse_bsc_tensor(col_indices, row_indices, values, blocksize, shape)
+print(sparse_bsc_tensor)
 
-
-# sparse_bsc_tensor
-# Constructs a sparse tensor in BSC (Block Compressed Sparse Column) with specified 2-dimensional blocks at the given col_indices and row_indices.
-#values = torch.tensor([[1, 2], [3, 4], [5, 6]])
-#col_indices = torch.tensor([2, 0, 2])
-#row_indices = torch.tensor([0, 1, 1])
-#blocksize = (2, 2)
-#shape = (6, 4)
-#sparse_bsc_tensor = torch.sparse_bsc_tensor(row_indices, col_indices, values, blocksize, shape)
-#print(sparse_bsc_tensor)
 
 # asarray
 # Converts obj to a tensor.
@@ -203,23 +193,23 @@ print(quantize_per_channel_tensor)
 
 # dequantize
 # Returns an fp32 Tensor by dequantizing a quantized Tensor.
-#quantized_tensor = torch.tensor([1, 2, 3], dtype=torch.qint8)
-#dequantize_tensor = torch.dequantize(quantized_tensor)
-#print(dequantize_tensor)
+quantized_tensor = torch.tensor([1, 2, 3], dtype=torch.qint8)
+dequantize_tensor = torch.dequantize(quantized_tensor)
+print(dequantize_tensor)
 
 # complex
 # Constructs a complex tensor with its real part equal to real and its imaginary part equal to imag.
-#real = torch.tensor([1, 2, 3])
-#imag = torch.tensor([4, 5, 6])
-#complex_tensor = torch.complex(real, imag)
-#print(complex_tensor)
+real = torch.tensor([1, 2, 3])
+imag = torch.tensor([4, 5, 6])
+complex_tensor = torch.complex(real, imag)
+print(complex_tensor)
 
 # polar
 # Constructs a complex tensor whose elements are Cartesian coordinates corresponding to the polar coordinates with absolute value abs and angle angle.
-#abs = torch.tensor([1, 2, 3])
-#angle = torch.tensor([0, np.pi/2, np.pi])
-#polar_tensor = torch.polar(abs, angle)
-#print(polar_tensor)
+abs = torch.tensor([1, 2, 3])
+angle = torch.tensor([0, np.pi/2, np.pi])
+polar_tensor = torch.polar(abs, angle)
+print(polar_tensor)
 
 # heaviside
 # Computes the Heaviside step function for each element in input.
